@@ -1,8 +1,22 @@
 {
+	"contentful":
+	{
+	  "apiKey": "e206cbe1e84991b899a73ea82a011acc8dc78698f5a1fc863b8577e62044d3a6",
+	  "spaces":
+	  {
+		"default":
+		{
+		  "id": "jec5js5o3o8t",
+		  "contentTypes":
+		  {
+			  "blocks": "Block"
+		  }
+		}
+	  }
+  	},
 	"sourcemaps": true,
 	"autoprefixer":
 	{
 	  "browsers": "last 2 versions"
   	}
-
 }

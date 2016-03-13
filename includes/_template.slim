@@ -1,0 +1,9 @@
+div.tm-item
+	div.tm-panel
+	img src="#{template.image}" alt="{template.slug}"
+		div.tm-content
+			h3 {template.title}
+			p {template.description}
+			p.uk-margin-bottom-remove.tm-post-actions
+				<a href="<!-- @path templates/{template.slug} -->">Details/a>
+				<a href="http://headwayrocket.com/demo?selected={template.slug}" class="uk-margin-left">Demo/a>

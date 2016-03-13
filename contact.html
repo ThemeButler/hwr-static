@@ -6,16 +6,22 @@
         <article itemscope="" itemtype="http://schema.org/BlogPosting" itemprop="text">
             <div class="uk-text-center uk-margin-large-bottom">
                 <h1 class="uk-margin-small-bottom" itemprop="headline">Contact</h1>
-                <h2 class="uk-margin-small-top uk-margin-bottom-remove">Got something you'd like to discuss?</h2>
+                <h2 class="uk-margin-small-top uk-margin-bottom-remove">Got something to discuss? Fill out the contact form below and I'll get back to you within 24 hours.</h2>
             </div>
-            <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2 uk-margin-large-bottom">
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-            </div>
+			<form class="uk-form" data-forge-name="contact">
+				<div class="uk-grid uk-grid-medium">
+					<div class="uk-width-medium-1-2 uk-margin-bottom">
+						<input type="text" data-forge-name="name" placeholder="Your name" tabindex="1">
+					</div>
+					<div class="uk-width-medium-1-2 uk-margin-bottom">
+						<input type="email" data-forge-name="email" placeholder="Your email address" tabindex="2">
+					</div>
+					<div class="uk-width-medium-1-1">
+						<textarea placeholder="Hi Chris... *" rows="10" data-forge-name="message" tabindex="3"></textarea>
+					</div>
+				</div>
+				<button class="uk-button uk-button-primary uk-margin-top" tabindex="4">Send message</button>
+			</form>
         </article>
     </div>
 </main>

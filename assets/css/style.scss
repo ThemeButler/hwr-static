@@ -297,6 +297,36 @@ div.tm-features {
     }
 }
 
+/* Contact */
+form {
+  display: flex;
+  margin: 0 auto;
+  width: 800px;
+}
+fieldset {
+    width: 100%;
+}
+form label {
+  display: table;
+  vertical-align: middle;
+}
+form input,
+form textarea {
+  flex: 1;
+  width: 100%;
+  padding: 20px 16px!important;
+  border-radius: 2px!important;
+}
+form textarea {
+  margin: 8px 0!important;
+}
+form button {
+    height: 50px;
+    padding: 0 20px!important;
+    font-size: 17px!important;
+    background: #DD7E02!important;
+}
+
 /* Footer */
 footer {
     padding: 50px 0;
