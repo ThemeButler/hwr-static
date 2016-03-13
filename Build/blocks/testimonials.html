@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.25.0/css/uikit.min.css" />
+        <link rel='stylesheet' href='../assets/css/style.css'>
+        <link href="../assets/favicon.ico" rel="shortcut icon">
+        <link href="../assets/apple-touch-icon.png" rel="apple-touch-icon">
+        <title>HeadwayRocket</title>
+    </head>
+    <body class="tm-features">
+<header class="uk-position-relative">
+    <div class="uk-container uk-container-center">
+        <a href="../index.html" class="tm-branding">
+    Headway<span>Rocket</span>
+    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Rocket-Launch-Copy" transform="translate(-163.000000, -64.000000)">
+                <g id="hero" transform="translate(0.000000, 1.000000)">
+                    <g id="logo" transform="translate(76.000000, 57.000000)">
+                        <g id="rocket" transform="translate(96.376921, 15.635549) rotate(14.000000) translate(-96.376921, -15.635549) translate(87.876921, 4.635549)">
+                            <path d="M13.428725,11.6568292 C14.63785,10.0914125 15.434725,8.58216667 15.95535,7.20045625 C16.132575,6.72945 16.37355,5.98449583 16.48235,5.53558958 C16.53845,5.30353958 16.59795,5.02728958 16.652775,4.7155875 C16.66595,4.6492875 16.674875,4.5885125 16.68635,4.52175208 C16.699525,4.43795625 16.7127,4.35185833 16.725025,4.26391875 C16.8623,3.33894167 16.883125,2.53781667 16.855925,1.9033625 C16.83425,1.3950625 16.7977,0.964572917 16.823625,0.933725 C16.838075,0.915308333 16.85295,0.895970833 16.8674,0.875252083 C16.9779,0.724235417 17.025075,0.568614583 16.976625,0.527177083 C16.976625,0.527177083 16.96345,0.5165875 16.9473,0.503235417 C16.93115,0.489883333 16.943475,0.35774375 16.9745,0.207647917 C17.00595,0.0580125 16.910325,-0.0221 16.7603,0.0294666667 C16.6107,0.0805729167 16.473,0.10911875 16.453025,0.0934645833 L16.417325,0.0644583333 C16.367175,0.0248625 16.239675,0.115104167 16.130875,0.265660417 C16.12025,0.281314583 16.11005,0.29696875 16.1007,0.3121625 C16.08455,0.33840625 15.69185,0.384908333 15.23115,0.483897917 C14.43895,0.6547125 13.16905,1.0580375 11.78695,2.00879792 C9.547625,3.50607292 8.130675,5.60188958 7.478725,6.73267292 C7.229675,7.16408333 6.678875,7.47118125 6.2101,7.45368542 C2.4429,7.31463958 0.830025,10.1793521 0.2482,11.6669583 C0.065025,12.1352021 0.348075,12.5086 0.8177,12.4993917 C9.1086,12.3308792 9.86425,17.9037625 9.83365,20.1478333 C9.826425,20.6561333 10.121375,20.9056792 10.523425,20.6432417 C13.536675,18.6749604 13.337775,14.9547938 13.058975,13.2480292 C12.976525,12.7466354 13.1274,12.0472625 13.428725,11.6568292 L13.428725,11.6568292 Z M12.495425,9.143875 C11.982875,9.75484792 11.119275,9.91553333 10.421425,9.47951875 C9.62115,8.9808875 9.3415,7.89108125 9.796675,7.04621667 C9.851925,6.94078125 9.91695,6.84731667 9.988775,6.76121875 C10.4992,6.15024583 11.363225,5.99048125 12.062775,6.425575 C12.86135,6.92236458 13.1427,8.01309167 12.687525,8.85887708 C12.631,8.9643125 12.565125,9.05869792 12.495425,9.143875 L12.495425,9.143875 Z" id="Shape" fill="#FFFFFF"></path>
+                            <path d="M5.20285,21.4268708 C6.689925,20.4581542 7.55055,18.6712771 7.95515,17.6054125 C8.133225,17.1348667 7.88885,16.9014354 7.49275,17.1744625 C5.933425,18.2495354 5.100425,19.9351208 4.71495,20.9535625 C4.536875,21.4245688 4.800375,21.6888479 5.20285,21.4268708 L5.20285,21.4268708 Z" id="Shape" fill="#F8E81C"></path>
+                            <path d="M2.24315,21.7804708 C4.5135,20.4240833 5.734525,17.5722625 6.228375,16.1306979 C6.392,15.6537062 6.145075,15.4234979 5.742175,15.6850146 C3.357925,17.2347771 2.193425,19.9079562 1.72805,21.2859833 C1.566975,21.7634354 1.832175,22.0258729 2.24315,21.7804708 L2.24315,21.7804708 Z" id="Shape" fill="#F8E81C"></path>
+                            <path d="M1.709775,18.4613271 C3.19685,17.4935313 4.05705,15.707575 4.46165,14.6421708 C4.64015,14.171625 4.39535,13.9386542 3.99925,14.2112208 C2.440775,15.2853729 1.60735,16.9700375 1.221875,17.9884792 C1.043375,18.459025 1.3073,18.7233042 1.709775,18.4613271 L1.709775,18.4613271 Z" id="Shape" fill="#F8E81C"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+</a>
+
+        <nav class="uk-float-right">
+    <a href="../blocks.html">Blocks</a>
+    <a href="../templates.html">Templates</a>
+    <a href="../help.html">Help</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../contact.html">Contact</a>
+</nav>
+
+    </div>
+</header>
+<main>
+    <div class="uk-container uk-container-center tm-dark">
+        <article itemscope="" itemtype="http://schema.org/Product" itemprop="text">
+            <div class="uk-text-center uk-margin-large-bottom">
+                <div class="tm-single-title uk-clearfix uk-container-center">
+                    <img class="uk-float-left uk-margin-right" src="../assets/images/icon-testimonials.svg" alt="Testimonials Block for Headway" />
+                    <h1 class="uk-margin-remove uk-float-left" itemprop="headline">Testimonials</h1>
+                </div>
+                <h2 class="uk-margin-small-top uk-margin-bottom">The easiest way to showcase client quotes or testimonials on your Headway site.</h2>
+                <div class="tm-actions">
+                    <a href="#" class="tm-button tm-button-medium uk-margin-right">
+                        Pricing
+                        <svg class="uk-margin-small-left uk-position-relative tm-down-icon" width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                			<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                				<path d="M9.79300341,0.217645051 C9.6696587,0.0941979522 9.5234471,0.0325255973 9.35450512,0.0325255973 L0.623686007,0.0325255973 C0.454675768,0.0325255973 0.308566553,0.0941979522 0.185119454,0.217645051 C0.0616723549,0.341228669 0,0.487337884 0,0.656245734 C0,0.825119454 0.0616723549,0.971228669 0.185119454,1.0947099 L4.55054608,5.46013652 C4.67412969,5.58358362 4.82023891,5.64539249 4.98911263,5.64539249 C5.15798635,5.64539249 5.30423208,5.58358362 5.42757679,5.46013652 L9.79300341,1.09467577 C9.91631399,0.971228669 9.97822526,0.825119454 9.97822526,0.656211604 C9.97822526,0.487337884 9.91631399,0.341228669 9.79300341,0.217645051 L9.79300341,0.217645051 Z" id="down" fill="#DD7E02"></path>
+                			</g>
+                		</svg>
+                    </a>
+                    <a href="#" class="tm-button tm-button-medium">
+                        Demo
+                        <svg class="uk-margin-small-left" width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <path d="M9.43986333,0.549498861 C9.07364465,0.183189066 8.63241458,0 8.11651481,0 L1.87307517,0 C1.3571754,0 0.91594533,0.183189066 0.549567198,0.549498861 C0.183257403,0.915876993 6.83371297e-05,1.35708428 6.83371297e-05,1.87300683 L6.83371297e-05,8.11637813 C6.83371297e-05,8.63225513 0.183257403,9.07350797 0.549567198,9.4398861 C0.91594533,9.80626424 1.3571754,9.9894533 1.87307517,9.9894533 L8.11644647,9.9894533 C8.63234624,9.9894533 9.07357631,9.80626424 9.43979499,9.4398861 C9.80617312,9.07350797 9.98936219,8.6322779 9.98936219,8.11637813 L9.98936219,1.87300683 C9.98933941,1.35708428 9.80615034,0.915808656 9.43986333,0.549498861 L9.43986333,0.549498861 Z M8.32457859,5.20277904 C8.32457859,5.38487472 8.23990888,5.51271071 8.07091116,5.58646925 C8.01462415,5.60813212 7.96022779,5.61897494 7.90829157,5.61897494 C7.79134396,5.61897494 7.69375854,5.5777221 7.6156492,5.49542141 L6.67920273,4.55892938 L3.20646925,8.03186788 C3.12398633,8.11419134 3.02651481,8.15544419 2.91375854,8.15544419 C2.80095672,8.15544419 2.70339408,8.11419134 2.62102506,8.03186788 L1.95767654,7.36840547 C1.87528474,7.28617312 1.83407745,7.18842825 1.83407745,7.0757631 C1.83407745,6.96314351 1.87528474,6.86553531 1.95767654,6.78321185 L5.43061503,3.31022779 L4.49410023,2.37373576 C4.35965831,2.24799544 4.32933941,2.09633257 4.40300683,1.91849658 C4.47667426,1.7494533 4.60464692,1.66482916 4.7867426,1.66482916 L7.90831435,1.66482916 C8.02102506,1.66482916 8.11861048,1.70605923 8.20111617,1.7884738 C8.28341686,1.87079727 8.32460137,1.96838269 8.32460137,2.08111617 L8.32460137,5.20277904 L8.32457859,5.20277904 Z" id="external" fill="#DD7E02"></path>
+						    </g>
+						</svg>
+                    </a>
+                </div>
+            </div>
+            <div class="tm-features uk-margin-large">
+                <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-3">
+                    <div>
+                        <h3>Add testimonials via Headway</h3>
+                        <p>Perfect for quickly adding a feature grid with minimal content. Content is added via the block options in Headway.</p>
+                    </div>
+                    <div>
+                        <h3>Add testimonials via WordPress</h3>
+                        <p>For long form content, use the built in Features post type, which can then be filtered and outputted as needed.</p>
+                    </div>
+                    <div>
+                        <h3>Filtering &amp; ordering</h3>
+                        <p>Filter your testimonials content based on category, tag, author, or even date. Testimonials can be ordered based on date and post id.</p>
+                    </div>
+                    <div>
+                        <h3>Flexible content grid</h3>
+                        <p>Display your testimonials in one column or ten, it's up to you. Also easy to set the spacing between rows and columns.</p>
+                    </div>
+                    <div>
+                        <h3>Display as grid</h3>
+                        <p>Easily create a grid of testimonials, with lots of customization options make it easy to create your perfect testimonials page.</p>
+                    </div>
+                    <div>
+                        <h3>Display as slider</h3>
+                        <p>If prefered, you can display your testimonials in a horizontal slider, again fully customizable and easy to style in the Visual Editor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-3 uk-margin-large-bottom">
+                <div class="tm-screenshots tm-media-grid">
+                    <h3>Screenshots</h3>
+                    <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2">
+                        <figure class="uk-overlay uk-overlay-hover">
+                            <img src="../assets/images/placeholder.jpg" alt="Alt" width="176" height="108" />
+                            <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon uk-overlay-slide-top"></div>
+                            <a class="uk-position-cover" href="#" title=""></a>
+                        </figure>
+                        <figure class="uk-overlay uk-overlay-hover">
+                            <img src="../assets/images/placeholder.jpg" alt="Alt" width="176" height="108" />
+                            <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon uk-overlay-slide-top"></div>
+                            <a class="uk-position-cover" href="#" title=""></a>
+                        </figure>
+                        <figure class="uk-overlay uk-overlay-hover">
+                            <img src="../assets/images/placeholder.jpg" alt="Alt" width="176" height="108" />
+                            <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon uk-overlay-slide-top"></div>
+                            <a class="uk-position-cover" href="#" title=""></a>
+                        </figure>
+                        <figure class="uk-overlay uk-overlay-hover">
+                            <img src="../assets/images/placeholder.jpg" alt="Alt" width="176" height="108" />
+                            <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon uk-overlay-slide-top"></div>
+                            <a class="uk-position-cover" href="#" title=""></a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="tm-videos tm-media-grid">
+                    <h3>Videos</h3>
+                    <div class="uk-grid uk-grid-width-1-1 uk-grid-width-medium-1-2">
+                        <figure class="uk-overlay uk-overlay-hover">
+                            <img src="../assets/images/placeholder.jpg" alt="Alt" width="176" height="108" />
+                            <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon uk-overlay-slide-top"></div>
+                            <a class="uk-position-cover" href="#" title=""></a>
+                        </figure>
+                        <figure class="uk-overlay uk-overlay-hover">
+                            <img src="../assets/images/placeholder.jpg" alt="Alt" width="176" height="108" />
+                            <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon uk-overlay-slide-top"></div>
+                            <a class="uk-position-cover" href="#" title=""></a>
+                        </figure>
+                        <figure class="uk-overlay uk-overlay-hover">
+                            <img src="../assets/images/placeholder.jpg" alt="Alt" width="176" height="108" />
+                            <div class="uk-overlay-panel uk-overlay-background uk-overlay-icon uk-overlay-slide-top"></div>
+                            <a class="uk-position-cover" href="#" title=""></a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="tm-links">
+                    <h3>In the wild</h3>
+                    <a href="http://www.flourishthriveacademy.com/" target="_blank" rel="nofollow">http://www.flourishthriveacademy.com/</a>
+                    <a href="http://rockresearch.com/" target="_blank" rel="nofollow">http://rockresearch.com/</a>
+                    <a href="http://sociallysorted.com.au/" target="_blank" rel="nofollow">http://sociallysorted.com.au/</a>
+                    <a href="http://www.jayarcherfloraldesign.com/" target="_blank" rel="nofollow">http://www.jayarcherfloraldesign.com/</a>
+                    <a href="http://webstervilledesign.com/" target="_blank" rel="nofollow">http://webstervilledesign.com/</a>
+                    <a href="http://www.susanconstantine.com/" target="_blank" rel="nofollow">http://www.susanconstantine.com/</a>
+                    <a href="http://stoffeerderijcalypso.nl/" target="_blank" rel="nofollow">http://stoffeerderijcalypso.nl/</a>
+                    <a href="http://myfreelance101.com/" target="_blank" rel="nofollow">http://myfreelance101.com/</a>
+                    <a href="http://www.yogawellinstitute.com/" target="_blank" rel="nofollow">http://www.yogawellinstitute.com/</a>
+                    <a href="http://courtneyengle.com/" target="_blank" rel="nofollow">http://courtneyengle.com/</a>
+                    <a href="http://wholefamilymd.com/" target="_blank" rel="nofollow">http://wholefamilymd.com/</a>
+                    <a href="http://mcinturfrealty.net/" target="_blank" rel="nofollow">http://mcinturfrealty.net/</a>
+                    <a href="http://georgebertelstein.com/" target="_blank" rel="nofollow">http://georgebertelstein.com/</a>
+                    <a href="http://siteopus.com/" target="_blank" rel="nofollow">http://siteopus.com/</a>
+                    <a href="http://www.zha-ny.com/" target="_blank" rel="nofollow">http://www.zha-ny.com/</a>
+                    <a href="http://www.evanwilliamscatering.com/" target="_blank" rel="nofollow">http://www.evanwilliamscatering.com/</a>
+                    <a href="http://healthypdx.com/" target="_blank" rel="nofollow">http://healthypdx.com/</a>
+                </div>
+        </article>
+        <div class="tm-post-nav">
+            <a href="mailchimp.html" class="tm-prev">Previous</a>
+            <a href="toolkit.html" class="tm-next">Next</a>
+        </div>
+    </div>
+</main>
+		<footer>
+			<div class="uk-container uk-container-center">
+				<div class="uk-grid">
+					<div class="tm-about uk-width-1-1 uk-width-medium-2-6">
+						<h3>About</h3>
+						<p>HeadwayRocket has been extending and theming Headway since 2012. We enjoy making products that make Headway even more awesome.</p>
+						<p class="uk-margin-remove"><a href="../about.html">Read our story</a></p>
+					</div>
+					<div class="tm-links uk-width-1-6">
+						<h3>Support</h3>
+						<a href="../help.html">Overview</a>
+						<a href="../faqs.html">Faqs</a>
+						<a href="../guides.html">Guides</a>
+						<a href="../tutorials.html">Tutorials</a>
+						<a href="../submit.html">Create a ticket</a>
+					</div>
+					<div class="tm-links uk-width-1-6">
+						<h3>Social</h3>
+						<a href="https://www.facebook.com/HeadwayRocket" target="_blank">Facebook</a>
+						<a href="https://twitter.com/HeadwayRocket" target="_blank">Twitter</a>
+						<a href="https://plus.google.com/HeadwayRocket" target="_blank">Google+</a>
+						<a href="https://www.youtube.com/HeadwayRocket" target="_blank">Youtube</a>
+					</div>
+					<div class="uk-width-1-1 uk-width-medium-2-6">
+						<h3>Newsletter</h3>
+						<p>Be the first to know when we release new Headway goodies. No spam guarenteed!</p>
+						<form class="/" action="index.html" method="post">
+							<input type="email" name="name" value="" placeholder="Enter your email address">
+							<button type="button" name="button">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.25.0/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.25.0/js/components/parallax.min.js"></script>
+		<script src='../assets/js/app.js'></script>
+	</body>
+</html>

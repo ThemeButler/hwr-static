@@ -1,0 +1,311 @@
+/* Base typo */
+body {
+  font-family: 'Lato', sans-serif!important;
+  font-size: 17px;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+h2 {
+    font-weight: 700;
+    font-size: 35px;
+}
+.tm-dark h2 {
+    color: #666;
+    font-size: 20px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.tm-dark h3 {
+    color: #333;
+}
+h1 + h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #777;
+}
+a, a:link {
+    color: #DD7E02;
+}
+h3 a {
+    font-weight: bold;
+}
+p {
+    font-size: 17px;
+    color: #4A4A4A;
+    line-height: 25px;
+}
+.tm-dark p {
+    // color: rgba(255,255,255,0.6);
+    color: rgba(0,0,0,0.6);
+}
+
+/* Utilities */
+.uk-block {
+    padding: 150px 0;
+}
+.uk-block-top {
+    padding: 150px 0 0;
+}
+.tm-panel {
+    padding: 30px;
+}
+button, .tm-button {
+    background: #f9f9f9;
+    color: #444;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 0;
+}
+.tm-button:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.tm-button-medium {
+    padding: 10px 25px;
+}
+.tm-button-large {
+    padding: 20px 40px;
+}
+.tm-button-primary {
+    background: #373330;
+}
+.tm-button-secondary {
+    background: #373330;
+    color: #fff;
+}
+
+/* Header bg */
+header {
+    background-image: url(header-inner-white.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 270px;
+}
+.tm-home header {
+  height: 100vh;
+  background-image: url(home-bg-white.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
+}
+
+/* Branding */
+.tm-branding {
+  margin-top: 50px;
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  font-weight: 700;
+}
+.tm-branding:hover {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+.tm-branding:active {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    position: relative;
+    bottom: -1px;
+}
+.tm-branding span {
+  display: block;
+  font-size: 35px;
+  font-weight: 900;
+  margin: 4px 0 0 -1px;
+  text-shadow: 0px 1px 1px rgba(30,72,105,0.36);
+}
+.tm-branding svg {
+    position: absolute;
+    top: 0;
+    right: 2px;
+}
+.tm-branding:active svg {
+    top: 2px;
+}
+
+/* Nav */
+nav {
+  margin-top: 70px;
+}
+
+.tm-branding,
+.tm-branding:link {
+  color: #fff;
+}
+nav {
+    a, a:link {
+      margin-left: 25px;
+      display: inline-block;
+      color: rgba(255,255,255,0.7);
+    }
+    a:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+    a.current {
+        color: #fff;
+    }
+}
+
+/* Hero */
+.tm-hero {
+  margin-top: 30%;
+  text-align: center;
+}
+.tm-hero * {
+  color: #fff;
+  text-shadow: 0px 1px 1px rgba(30,72,105,0.36);
+}
+
+/* Main */
+main {
+    background: #fff;
+    padding-bottom: 125px;
+    position: relative;
+}
+// main:after {
+//     content: '';
+//     display: block;
+//     width: 100%;
+//     height: 94px;
+//     position: absolute;
+//     background: transparent url(curve-grey.png) no-repeat;
+//     background-size: cover;
+//     bottom: -12px;
+// }
+main h1 {
+    color: #222;
+}
+main h1 i {
+    display: none;
+}
+main h1 sup {
+    background: #608F2A;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 2px 6px;
+    display: inline-block;
+    line-height: 16px;
+    border-radius: 2px;
+    position: relative;
+    top: -20px;
+}
+main h1 strong {
+    border-bottom: 2px solid #BE6031;
+}
+.tm-home main figure {
+  bottom: -100px
+}
+
+/* News */
+.tm-news {
+    background: #F2F2F2 url(curve-grey-btm.jpg) bottom no-repeat;
+    background-size: contain;
+    padding-bottom: 75px;
+    padding-top: 10px;
+}
+.tm-news .tm-panel {
+    background-image: linear-gradient(-180deg, #FFFFFF 26%, rgba(255,255,255,0.00) 100%);
+    border-radius: 2px;
+}
+.tm-news .tm-panel:hover {
+    background: #fff;
+}
+
+/* Blocks */
+.tm-blocks .tm-panel {
+    position: relative;
+    padding-left: 50px;
+}
+.tm-blocks .tm-panel h3 {
+    margin-top: 0;
+}
+.tm-blocks .tm-dark .tm-panel img {
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+.tm-included .tm-panel img {
+    position: relative;
+    top: -2px;
+}
+
+/* Block */
+.tm-single-title {
+    width: auto;
+    display: inline-block;
+}
+.tm-single-title h1{
+    width: auto;
+    position: relative;
+    top: -5px;
+}
+div.tm-features {
+  border: solid rgba(255,255,255,0.1);
+  border-width: 1px 0;
+  padding: 3em 0 1em;
+}
+div.tm-features div {
+  margin-bottom: 2em;
+}
+.tm-media-grid figure {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    padding: 50px 0;
+    input {
+      border: 0;
+      background: #f7f7f7;
+      padding: 9px 11px;
+      display: inline-block;
+      min-width: 200px;
+    }
+    button {
+        padding: 9px 11px;
+        background: #333;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+.tm-links a {
+    display: block;
+    line-height: 2;
+}
+.tm-about p:first-of-type {
+    max-width: 85%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  /* Styles for mobile */
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles for tablet */
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+
+  /* Don't forget your Retina CSS! */
+
+  body {
+    background-size: 72px 72px;
+  }
+
+}

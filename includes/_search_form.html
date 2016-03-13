@@ -1,0 +1,19 @@
+<script type="text/javascript">
+
+	var domainroot="hwr.getforge.io"
+
+	function Gsitesearch(curobj){
+
+		curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
+
+	}
+
+</script>
+
+
+<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" class="uk-form">
+
+	<input name="q" type="hidden" />
+	<input name="qfront" type="text" /> <input type="submit" value="Search" />
+
+</form>

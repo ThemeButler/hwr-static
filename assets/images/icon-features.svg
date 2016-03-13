@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="33px" viewBox="0 0 36 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Blocks" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rocket-Launch-Copy" transform="translate(-117.000000, -598.000000)">
+            <g id="Group-4" transform="translate(107.000000, 370.000000)">
+                <g id="features" transform="translate(10.000000, 226.000000)">
+                    <g id="icon" transform="translate(0.000000, 2.000000)">
+                        <rect id="Rectangle-7" stroke="#FFFFFF" stroke-width="3.5999999" x="2.3813059" y="6.19033761" width="27" height="26.7567568" rx="5.39999986"></rect>
+                        <path d="M3.75876292,12.6128502 C3.75876292,12.6128502 9.49137535,16.5512003 13.0278716,17.5578238 C13.353385,17.6504775 18.0335686,12.7026691 23.3682853,8.24869108 C28.6540569,3.8355776 34.5949344,-0.0842476534 34.8855752,0.0412893951 C35.3953077,0.261459083 34.9788989,2.05486883 35.545745,2.54762045 C35.9864512,2.93072036 30.820014,6.93443114 28.0161941,9.84824268 C23.1575204,14.8975183 19.3295454,20.9197015 19.3295454,20.9197015 L13.7113047,28.8893369 C13.7113047,28.8893369 9.31336632,23.9487963 7.23245603,21.9382087 C4.77641479,19.5651675 0.100450164,15.7384506 0.100450164,15.7384506 L3.75876292,12.6128502 Z" id="Rectangle-8" fill="#DD4E00"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
