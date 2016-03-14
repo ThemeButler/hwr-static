@@ -1,0 +1,16 @@
+<!-- $body_class tm-templates -->
+<!-- @include _head -->
+<!-- @include _header -->
+
+main
+    div.uk-container.uk-container-center.tm-dark
+        div.uk-text-center.uk-margin-large-bottom
+			h1.uk-margin-small-bottom itemprop="headline" Tutorials
+			h2.uk-margin-small-top.uk-margin-bottom-remove Give you a head start and are easy to customize in the Visual Editor
+
+        div.uk-grid.uk-grid-collapse.uk-grid-width-1-1.uk-grid-width-medium-1-2.uk-margin-large-bottom
+			- for tutorial in contentful.tutorials
+				<!-- @include _tutorial -->
+
+<!-- @include _templates_features -->
+<!-- @include _footer -->

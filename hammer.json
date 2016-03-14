@@ -8,8 +8,47 @@
 		{
 		  "id": "jec5js5o3o8t",
 		  "contentTypes":
-		  {
-			  "blocks": "Block"
+			  {
+			  "blocks":
+				{
+				  "name": "Block",
+				  "template": "includes/_block_single.slim",
+				  "urlAliasPrefix": "blocks",
+				  "urlAliasSource": "slug",
+				  "renderOnBuild": true
+			  },
+			  "templates":
+				{
+				  "name": "Template",
+				  "template": "includes/_template.slim",
+				  "urlAliasPrefix": "templates",
+				  "urlAliasSource": "slug",
+				  "renderOnBuild": true
+			  },
+				"guides":
+				  {
+					"name": "Guide",
+					"template": "includes/_guide.slim",
+					"urlAliasPrefix": "guide",
+					"urlAliasSource": "slug",
+					"renderOnBuild": true
+				},
+				"tutorials":
+				  {
+					"name": "Tutorial",
+					"template": "includes/_tutorial.slim",
+					"urlAliasPrefix": "tutorials",
+					"urlAliasSource": "slug",
+					"renderOnBuild": true
+				},
+				"posts":
+				  {
+					"name": "Post",
+					"template": "includes/_post.slim",
+					"urlAliasPrefix": "blog",
+					"urlAliasSource": "slug",
+					"renderOnBuild": true
+				}
 		  }
 		}
 	  }

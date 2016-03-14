@@ -1,9 +1,9 @@
 div.tm-item
 	div.tm-panel
-	img src="#{block.image}" alt="{block.slug}"
+	img src="#{block.icon}" alt="#{block.title} Block for Headway"
 		div.tm-content
-			h3 {block.title}
-			p {block.description}
+			h3= block.title
+			p= block.excerpt
 			p.uk-margin-bottom-remove.tm-post-actions
-				<a href="<!-- @path blocks/#{block.slug} -->">Details/a>
-				<a href="http://headwayrocket.com/demo?selected={block.slug}" class="uk-margin-left">Demo/a>
+				a href="/blocks/#{block.slug}.html" Details
+				a.uk-margin-left href="http://headwayrocket.com/demo?selected=#{block.slug}" Demo
